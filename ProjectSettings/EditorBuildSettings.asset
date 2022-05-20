@@ -4,5 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Daniel/DanielTest.unity
+    guid: 4adcca3bd04e1924c85f742dfd7904da
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: f2531b688cf03ab4c99c1359725bf4ad,
+      type: 2}
