@@ -10,6 +10,7 @@ public class ProjectileGun : MonoBehaviour
     public Camera fpsCam;
     public Transform gunPoint;
     public GameObject muzzleFlash;
+    public Shoot rifle;
     public float shootForce, upwardForce;
     public float timeBetweenShooting, spread, reloadTime, timeBetweenShots;
     public int magSize, bulletsPerTap;
@@ -41,9 +42,11 @@ public class ProjectileGun : MonoBehaviour
         if (readyToShoot && shooting && !reloading && bulletsLeft > 0)
         {
             bulletsShot = 0;
-
+            rifle.anim.SetBool("auto", true);
             Shoot();
         }
+        else
+            rifle.anim.SetBool("auto", false);
     }
 
     private void Shoot()
@@ -104,6 +107,7 @@ public class ProjectileGun : MonoBehaviour
 
     private void Reload()
     {
+        rifle.anim.SetTrigger("reload");
         reloading = true;
         Invoke("ReloadFinished", reloadTime);
     }

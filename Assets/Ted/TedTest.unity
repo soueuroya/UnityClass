@@ -136,9 +136,9 @@ GameObject:
   - component: {fileID: 8267309}
   - component: {fileID: 8267308}
   - component: {fileID: 8267307}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: pin
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -261,8 +261,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 115451959}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 1.21}
-  m_LocalScale: {x: 0.030559527, y: 0.030559527, z: 0.030559527}
+  m_LocalPosition: {x: -0, y: 0, z: 0.473}
+  m_LocalScale: {x: 0.0022669586, y: 0.005036373, z: 0.030559527}
   m_Children: []
   m_Father: {fileID: 1586545587}
   m_RootOrder: 1
@@ -286,7 +286,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b91f3edd5fe27144fb19536667383674, type: 2}
+  - {fileID: 2100000, guid: 7c8d760f1efe269408b40cbe3f8f0950, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -438,7 +438,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 231520764}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3436, y: -0.322, z: 1.198}
+  m_LocalPosition: {x: 0.365, y: -0.322, z: 1.198}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1978698639}
@@ -743,9 +743,9 @@ GameObject:
   - component: {fileID: 398420554}
   - component: {fileID: 398420553}
   - component: {fileID: 398420552}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: pin_6
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -856,9 +856,9 @@ GameObject:
   - component: {fileID: 431452995}
   - component: {fileID: 431452994}
   - component: {fileID: 431452993}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: pin_8
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -969,9 +969,9 @@ GameObject:
   - component: {fileID: 508905324}
   - component: {fileID: 508905323}
   - component: {fileID: 508905322}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: pin_2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1082,9 +1082,9 @@ GameObject:
   - component: {fileID: 639581341}
   - component: {fileID: 639581340}
   - component: {fileID: 639581339}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: pin_5
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1199,7 +1199,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &726548327
 Transform:
@@ -1209,8 +1209,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 726548326}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: -0.0000005662441}
-  m_LocalPosition: {x: 6.3627, y: -0, z: -4.5}
-  m_LocalScale: {x: 54.48198, y: 1.14, z: 1}
+  m_LocalPosition: {x: 6.3627, y: 2, z: -4.5}
+  m_LocalScale: {x: 54.48198, y: 5.627154, z: 1}
   m_Children: []
   m_Father: {fileID: 1479979885}
   m_RootOrder: 0
@@ -1304,8 +1304,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 904591719}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: -0.00000023841855}
-  m_LocalPosition: {x: 6.2954, y: 0, z: 3.7}
-  m_LocalScale: {x: 54.016983, y: 1, z: 1}
+  m_LocalPosition: {x: 6.2954, y: 1.7, z: 3.7}
+  m_LocalScale: {x: 54.016983, y: 5.4932, z: 1}
   m_Children: []
   m_Father: {fileID: 1479979885}
   m_RootOrder: 2
@@ -1555,9 +1555,9 @@ GameObject:
   - component: {fileID: 1112099538}
   - component: {fileID: 1112099537}
   - component: {fileID: 1112099536}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: pin_9
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1890,9 +1890,9 @@ GameObject:
   - component: {fileID: 1284229917}
   - component: {fileID: 1284229916}
   - component: {fileID: 1284229915}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2143,7 +2143,7 @@ PrefabInstance:
     - target: {fileID: 5686745916957266324, guid: cc4156adf6614cb4693b57fd602cf0b9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.40699995
+      value: -0.4069999
       objectReference: {fileID: 0}
     - target: {fileID: 5686745916957266324, guid: cc4156adf6614cb4693b57fd602cf0b9,
         type: 3}
@@ -2214,8 +2214,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568073492}
   m_LocalRotation: {x: -0, y: -0.70710707, z: -0, w: 0.70710653}
-  m_LocalPosition: {x: -20.6, y: 0, z: 0}
-  m_LocalScale: {x: 8.383004, y: 1.14, z: 1}
+  m_LocalPosition: {x: -20.6, y: 3.12, z: 0}
+  m_LocalScale: {x: 8.383004, y: 6.5778, z: 1}
   m_Children: []
   m_Father: {fileID: 1479979885}
   m_RootOrder: 1
@@ -2307,9 +2307,9 @@ GameObject:
   - component: {fileID: 1636681715}
   - component: {fileID: 1636681714}
   - component: {fileID: 1636681713}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: pin_7
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2539,12 +2539,13 @@ MonoBehaviour:
   gunPoint: {fileID: 231520765}
   muzzleFlash: {fileID: 1000010254994808, guid: 9defeac88977c0d448aa4541073ee9e4,
     type: 3}
-  shootForce: 25
+  rifle: {fileID: 1960178793}
+  shootForce: 75
   upwardForce: 0
   timeBetweenShooting: 0.1
-  spread: 1
+  spread: 0
   reloadTime: 1.5
-  timeBetweenShots: 0.1
+  timeBetweenShots: 0
   magSize: 100
   bulletsPerTap: 1
   allowButtonHold: 1
@@ -2561,9 +2562,9 @@ GameObject:
   - component: {fileID: 2123141504}
   - component: {fileID: 2123141503}
   - component: {fileID: 2123141502}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: pin_4
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2674,9 +2675,9 @@ GameObject:
   - component: {fileID: 2136948293}
   - component: {fileID: 2136948292}
   - component: {fileID: 2136948291}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: pin_1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
