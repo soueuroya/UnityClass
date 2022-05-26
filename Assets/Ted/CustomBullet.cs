@@ -45,12 +45,6 @@ public class CustomBullet : MonoBehaviour
         //When to explode
         if (collisions > maxCollisions) 
         {
-            Ray bulletRay = new Ray(bullet.position, bullet.forward);
-            RaycastHit bulletHit;
-            if (Physics.Raycast(bulletRay, out bulletHit))
-                {
-                    Instantiate(bHole, bulletHit.point, Quaternion.LookRotation(bulletHit.normal));
-                }
             Explode();
         }
         //Count down lifetime
@@ -87,14 +81,17 @@ public class CustomBullet : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision collision)
-    {
-        
+    {        
         //Don't count collisions with other bullets
         if (collision.collider.CompareTag("Bullet")) return;
 
-    
         //Count up collisions
         collisions++;
+
+        if (collision.transform != null)
+        {
+            Instantiate(bHole, collision.contacts[0].point, Quaternion.LookRotation(collision.contacts[0].normal));
+        }
 
         //Explode if bullet hits an enemy directly and explodeOnTouch is activated
         if (collision.collider.CompareTag("Enemy") && explodeOnTouch) Explode();

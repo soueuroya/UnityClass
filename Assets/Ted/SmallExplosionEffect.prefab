@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4000013505110654}
   - component: {fileID: 198000010687303002}
   - component: {fileID: 199000011921653214}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Embers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4759,7 +4759,7 @@ GameObject:
   - component: {fileID: 4000013521198930}
   - component: {fileID: 198000012569031976}
   - component: {fileID: 199000010351236460}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9556,7 +9556,7 @@ GameObject:
   - component: {fileID: 4000014291108156}
   - component: {fileID: 198000010217891986}
   - component: {fileID: 199000012837251388}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14430,7 +14430,7 @@ GameObject:
   - component: {fileID: 4000011428506136}
   - component: {fileID: 198000012942003240}
   - component: {fileID: 199000010939959374}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: SmallExplosionEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
