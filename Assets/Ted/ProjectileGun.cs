@@ -70,6 +70,7 @@ public class ProjectileGun : MonoBehaviour
         //calc spread
         float x = Random.Range(-spread, spread);
         float y = Random.Range(-spread, spread);
+        float z = Random.Range(-spread, spread);
 
         //calc new dir with spread
         Vector3 dirWithSpread = dirWithoutSpread + new Vector3(x, y, 0);

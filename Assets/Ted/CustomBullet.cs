@@ -14,6 +14,8 @@ public class CustomBullet : MonoBehaviour
     public Rigidbody rb;
     public GameObject explosion;
     public LayerMask whatIsEnemies;
+    public GameObject bHole;
+    public Transform bullet;
 
     //Stats
     [Range(0f,1f)]
@@ -40,9 +42,17 @@ public class CustomBullet : MonoBehaviour
 
     private void Update()
     {
-        //When to explode:
-        if (collisions > maxCollisions) Explode();
-
+        //When to explode
+        if (collisions > maxCollisions) 
+        {
+            Ray bulletRay = new Ray(bullet.position, bullet.forward);
+            RaycastHit bulletHit;
+            if (Physics.Raycast(bulletRay, out bulletHit))
+                {
+                    Instantiate(bHole, bulletHit.point, Quaternion.LookRotation(bulletHit.normal));
+                }
+            Explode();
+        }
         //Count down lifetime
         maxLifetime -= Time.deltaTime;
         if (maxLifetime <= 0) Explode();
@@ -68,7 +78,8 @@ public class CustomBullet : MonoBehaviour
         }
 
         //Add a little delay, just to make sure everything works fine
-        Invoke("Delay", 0.05f);
+        //Invoke("Delay", 0.05f);
+        Destroy(gameObject);
     }
     private void Delay()
     {
@@ -77,9 +88,11 @@ public class CustomBullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        
         //Don't count collisions with other bullets
         if (collision.collider.CompareTag("Bullet")) return;
 
+    
         //Count up collisions
         collisions++;
 
