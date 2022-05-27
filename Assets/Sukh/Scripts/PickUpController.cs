@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PickUpController : MonoBehaviour
 {
-    public Shoot gunScript;
+    public ProjectileGun gunScript;
     public Rigidbody rb;
     public BoxCollider coll;
     public Transform player, gunContainer, fpsCam;
+    public Animator anim;
 
     public float pickUpRange;
     public float dropForwardForce, dropUpwardForce;
@@ -40,9 +41,15 @@ public class PickUpController : MonoBehaviour
     void Update()
     {
         Vector3 distanceToPlayer = player.position - transform.position;
-        if (!equipped && distanceToPlayer.magnitude <= pickUpRange && Input.GetKeyDown(KeyCode.E) && !slotFull) PickUp();
+        if (!equipped && distanceToPlayer.magnitude <= pickUpRange && Input.GetKeyDown(KeyCode.E) && !slotFull)
+        {
+            PickUp();
+        }
 
-        if (equipped && Input.GetKeyDown(KeyCode.Q))Drop();
+        if (equipped && Input.GetKeyDown(KeyCode.Q))
+        {
+            Drop();
+        }
     }
 
     private void PickUp()
@@ -60,15 +67,14 @@ public class PickUpController : MonoBehaviour
 
     }
 
-    private void Drop()
-    {
+    private void Drop(){
         equipped = false;
         slotFull = false;
         rb.isKinematic = false;
         coll.isTrigger = false;
         gunScript.enabled = false;
-
-        transform.SetParent(null);
+        anim.enabled = false;
+        transform.parent = null;
 
         rb.velocity = player.GetComponent<Rigidbody>().velocity;
         rb.AddForce(fpsCam.forward * dropForwardForce, ForceMode.Impulse);
