@@ -15,7 +15,7 @@ public class Zoom : MonoBehaviour
     void Awake()
     {
         // Get the camera on this gameObject and the defaultZoom.
-        camera = GetComponent<Camera>();
+        camera = Camera.main;
         if (camera)
         {
             defaultFOV = camera.fieldOfView;
