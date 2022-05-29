@@ -40,15 +40,18 @@ public class PickUpController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (equipped && Input.GetKeyDown(KeyCode.Q))
+        {
+            Drop();
+        }
+    }
+
+    void OnMouseOver()
+    {
         Vector3 distanceToPlayer = player.position - transform.position;
         if (!equipped && distanceToPlayer.magnitude <= pickUpRange && Input.GetKeyDown(KeyCode.E) && !slotFull)
         {
             PickUp();
-        }
-
-        if (equipped && Input.GetKeyDown(KeyCode.Q))
-        {
-            Drop();
         }
     }
 
