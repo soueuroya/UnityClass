@@ -68,7 +68,7 @@ public class FirstPersonAudio : MonoBehaviour
         float velocity = Vector3.Distance(CurrentCharacterPosition, lastCharacterPosition);
         if (velocity >= velocityThreshold && groundCheck && groundCheck.isGrounded)
         {
-            if (crouch && crouch.IsCrouched)
+            if (crouch && crouch.IsSliding)
             {
                 SetPlayingMovingAudio(crouchedAudio);
             }

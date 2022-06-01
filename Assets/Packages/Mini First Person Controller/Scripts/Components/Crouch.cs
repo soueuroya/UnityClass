@@ -8,7 +8,7 @@ public class Crouch : MonoBehaviour
     [Tooltip("Movement to slow down when crouched.")]
     public FirstPersonMovement movement;
     [Tooltip("Movement speed when crouched.")]
-    public float movementSpeed = 2;
+    public float movementSpeed = 9;
 
     [Header("Low Head")]
     [Tooltip("Head to lower when crouched.")]
@@ -22,7 +22,7 @@ public class Crouch : MonoBehaviour
     [HideInInspector]
     public float? defaultColliderHeight;
 
-    public bool IsCrouched { get; private set; }
+    public bool IsSliding { get; private set; }
     public event System.Action CrouchStart, CrouchEnd;
 
 
@@ -36,7 +36,7 @@ public class Crouch : MonoBehaviour
 
     void LateUpdate()
     {
-        if (Input.GetKey(key))
+        if (Input.GetKey(key) && movement.rb.velocity.magnitude < 2)
         {
             // Enforce a low head.
             if (headToLower)
@@ -74,37 +74,6 @@ public class Crouch : MonoBehaviour
                 // Lower the colliderToLower.
                 colliderToLower.height = Mathf.Max(defaultColliderHeight.Value - loweringAmount, 0);
                 colliderToLower.center = Vector3.up * colliderToLower.height * .5f;
-            }
-
-            // Set IsCrouched state.
-            if (!IsCrouched)
-            {
-                IsCrouched = true;
-                SetSpeedOverrideActive(true);
-                CrouchStart?.Invoke();
-            }
-        }
-        else
-        {
-            if (IsCrouched)
-            {
-                // Rise the head back up.
-                if (headToLower)
-                {
-                    headToLower.localPosition = new Vector3(headToLower.localPosition.x, defaultHeadYLocalPosition.Value, headToLower.localPosition.z);
-                }
-
-                // Reset the colliderToLower's height.
-                if (colliderToLower)
-                {
-                    colliderToLower.height = defaultColliderHeight.Value;
-                    colliderToLower.center = Vector3.up * colliderToLower.height * .5f;
-                }
-
-                // Reset IsCrouched.
-                IsCrouched = false;
-                SetSpeedOverrideActive(false);
-                CrouchEnd?.Invoke();
             }
         }
     }
