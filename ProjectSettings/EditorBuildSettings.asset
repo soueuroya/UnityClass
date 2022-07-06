@@ -9,5 +9,5 @@ EditorBuildSettings:
     path: Assets/Daniel/DanielTest.unity
     guid: 4adcca3bd04e1924c85f742dfd7904da
   m_configObjects:
-    com.unity.input.settings: {fileID: 11400000, guid: f2531b688cf03ab4c99c1359725bf4ad,
+    com.unity.input.settings: {fileID: 11400000, guid: ed3db77f5130afe4d8931af25a90d307,
       type: 2}
